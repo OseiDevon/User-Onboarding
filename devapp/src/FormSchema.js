@@ -1,5 +1,5 @@
 import * as yup from 'yup'
-const FormSchema = yup.object().shape({
+ const FormSchema = yup.object().shape({
     name: yup.string()
         .trim()
         .required('Name is required.')
@@ -14,3 +14,5 @@ const FormSchema = yup.object().shape({
     termsOfService: yup.boolean().oneOf([true],'Must Accept Terms of Service'),
     userAgreement: yup.boolean().oneOf([false],'Must accept Terms of Service'),
 })
+
+export default FormSchema
